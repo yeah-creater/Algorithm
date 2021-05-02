@@ -1,3 +1,5 @@
+package acm;
+
 import java.util.Scanner;
 
 /**
