@@ -1,6 +1,5 @@
 package acw.春季每日一题;
 
-import javax.sound.midi.Soundbank;
 import java.util.Scanner;
 
 /**
@@ -28,7 +27,7 @@ public class Day30剪绳子 {
             q[i] = in.nextDouble();
             if (q[i] > r) r = q[i];
         }
-        while (r - l > 0.00000001) {
+        while (r - l > 0.0001) {
             double mid = (r + l) / 2;
             if (check(mid)) l = mid;
             else r = mid;

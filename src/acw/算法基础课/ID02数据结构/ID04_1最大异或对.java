@@ -1,7 +1,6 @@
 package acw.算法基础课.ID02数据结构;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 
 /**
  * @author Yeah
@@ -9,45 +8,50 @@ import java.io.InputStreamReader;
  * //转化为二进制存进Trie树中
  */
 public class ID04_1最大异或对 {
-    static int son[][]=new int[4000010][2];
-    static int index;
-    static long max=0;
-    //在每次插入的时候就开始求异或的值
-    static void insert(String b1,int key){
-        StringBuilder b=new StringBuilder(b1);
-        int cnt=32-b.length();
-        //确保按位异或
-        String s="000000000000000000000000000000000000000000000000000000000000";
-        b.insert(0,s.substring(0,cnt));
-        System.out.println(b+"*");
-        long res=0;
-        int p=0;
-        for(int i=0;i<b.length();i++){
-            int u=b.charAt(i)=='1'?1:0;
-            if(son[p][u]==0) {
-                if(key>0)
-                    res=res*10+1;
-                son[p][u]=++index;
+    static int son[][]=new int[3000010][2];
+    static int n,idx;
+    static void insert(int x){
+        int p = 0;
+        for(int i = 30; i >= 0; i--){
+            if(son[p][(x >> i) & 1] == 0){
+                son[p][(x >> i) & 1] = ++ idx;
             }
-            //表示当前的数与上一个相同
-            else {
-                if(key>0)
-                    res=res*10;
-            }
-            p = son[p][u];
-        }
-        if(res>max) {
-            max = res;
+            p = son[p][(x >> i) & 1];
         }
     }
-    public static void main(String[] args) throws Exception {
-        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-        int n=Integer.parseInt(br.readLine());
-        String[] str = br.readLine().split(" ");
-        for(int i=0;i<str.length;i++){
-            String b = Integer.toBinaryString(Integer.parseInt(str[i]));
-            insert(b,i);
+
+    static int query(int x){
+        int p = 0, res = 0;
+        for(int i = 30; i >= 0; i--){
+            int s = (x >> i) & 1;
+            if(son[p][1-s] != 0){
+                res += (1 << i);
+                p = son[p][1-s];
+            }else{
+                p = son[p][s];
+            }
         }
-        System.out.println(Integer.parseInt(max+"",2));
+        return res;
+    }
+//    static int bf(){
+//        int max=0;
+//        for(int i=0;i<n;i++){
+//            for(int j=i;j<n;j++){
+//                max=Math.max(max,q[i]^q[j]);
+//            }
+//        }
+//        return max;
+//    }
+    public static void main(String[] args) {
+        Scanner in=new Scanner(System.in);
+        n=in.nextInt();
+        int max=0;
+        for(int i=0;i<n;i++){
+            int x=in.nextInt();
+            insert(x);
+            max=Math.max(max,query(x));
+        }
+        System.out.println(max);
+
     }
 }
