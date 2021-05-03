@@ -16,7 +16,7 @@ class Pair {
     }
 }
 
-public class ID3x四平方和 {
+public class Day24四平方和 {
     static HashMap<Integer, Pair> map = new HashMap<>();
 
     public static void main(String[] args) {
