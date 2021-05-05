@@ -37,7 +37,6 @@ public class ID3466清点代码库 {
     static ArrayList<Pair> res = new ArrayList<>();
 
     public static void main(String[] args) throws Exception {
-        Scanner in = new Scanner(System.in);
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         String[] s = br.readLine().split(" ");
