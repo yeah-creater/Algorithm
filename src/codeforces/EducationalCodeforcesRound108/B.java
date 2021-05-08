@@ -1,11 +1,11 @@
-package codeforces;
+package codeforces.EducationalCodeforcesRound108;
 
 import java.util.Scanner;
 
 /**
  * @author: yeah
  */
-public class TheCakeIsaLie {
+public class B {
     static int t, n, m;
     static int[][] f = new int[110][110];
 

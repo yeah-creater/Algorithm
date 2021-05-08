@@ -1,11 +1,11 @@
-package codeforces;
+package codeforces.CodeforcesRound719;
 
 import java.util.Scanner;
 
 /**
  * @author: yeah
  */
-public class OrdinaryNumbers {
+public class B {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
