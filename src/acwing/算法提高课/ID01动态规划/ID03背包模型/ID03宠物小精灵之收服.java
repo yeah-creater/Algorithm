@@ -7,7 +7,7 @@ import java.util.Scanner;
  * f[j][k]精灵球数量不超过j,体力不超过k
  * 属性是数量
  * <p>
- * 朴素做法 MLE 了hhh
+ * 朴素做法
  */
 public class ID03宠物小精灵之收服 {
     static int n, m, K;
