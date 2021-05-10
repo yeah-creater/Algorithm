@@ -7,6 +7,7 @@ import java.util.Scanner;
  */
 public class ID01采药 {
     static int[][] f = new int[110][1010];
+    static int[]g=new int[1010];
     static int[] v = new int[1010], w = new int[110];
     static int n, m;
 
@@ -18,13 +19,20 @@ public class ID01采药 {
             v[i] = in.nextInt();
             w[i] = in.nextInt();
         }
-        for (int i = 1; i <= n; i++) {
-            for (int j = 1; j <= m; j++) {
-                if (v[i] > j) f[i][j] = f[i - 1][j];
-                    //选当前草药和不选当前草药中选择最大值
-                else f[i][j] = Math.max(f[i - 1][j - v[i]] + w[i], f[i - 1][j]);
+//        //空间未优化
+//        for (int i = 1; i <= n; i++) {
+//            for (int j = 1; j <= m; j++) {
+//                if (v[i] > j) f[i][j] = f[i - 1][j];
+//                    //选当前草药和不选当前草药中选择最大值
+//                else f[i][j] = Math.max(f[i - 1][j - v[i]] + w[i], f[i - 1][j]);
+//            }
+//        }
+        //空间优化
+        for(int i=1;i<=n;i++){
+            for(int j=m;j>=v[i];j--){
+                g[j]=Math.max(g[j],g[j-v[i]]+w[i]);
             }
         }
-        System.out.println(f[n][m]);
+        System.out.println(g[m]);
     }
 }

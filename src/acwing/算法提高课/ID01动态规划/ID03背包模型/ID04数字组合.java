@@ -10,6 +10,7 @@ import java.util.Scanner;
 public class ID04数字组合 {
     static int n, m;
     static int[][] f = new int[110][10010];
+    static int[] g = new int[10010];
     static int[] v = new int[110];
 
     public static void main(String[] args) {
@@ -25,6 +26,11 @@ public class ID04数字组合 {
                 else f[i][j] = f[i - 1][j - v[i]] + f[i - 1][j];
             }
         }
-        System.out.println(f[n][m]);
+        for (int i = 1; i <= n; i++) {
+            for (int j = m; j >= v[i]; j--) {
+                g[j] += g[j - v[i]];
+            }
+        }
+        System.out.println(g[m]);
     }
 }
