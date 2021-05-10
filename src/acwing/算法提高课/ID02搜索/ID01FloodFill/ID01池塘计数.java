@@ -1,5 +1,6 @@
 package acwing.算法提高课.ID02搜索.ID01FloodFill;
 
+import java.util.Deque;
 import java.util.Scanner;
 
 /**
@@ -23,7 +24,6 @@ public class ID01池塘计数 {
             }
         }
     }
-
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         n = in.nextInt();
