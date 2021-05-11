@@ -8,7 +8,7 @@ import java.util.Scanner;
  * 完全平方数的质因数 指数都是偶数
  */
 public class ID04完全平方数 {
-    static HashMap<Long, Integer> map = new HashMap<>();
+    static HashMap<Long, Long> map = new HashMap<>();
     static long n;
 
     public static void main(String[] args) {
@@ -17,7 +17,7 @@ public class ID04完全平方数 {
         long x = n;
         for (int i = 2; i <= n / i; i++) {
             if (n % i == 0) {
-                int exp = 0;
+                long exp = 0;
                 while (n % i == 0) {
                     exp++;
                     n /= i;
@@ -25,7 +25,7 @@ public class ID04完全平方数 {
                 map.put((long) i, exp);
             }
         }
-        if (n > 1) map.put(n, 1);
+        if (n > 1) map.put(n, (long) 1);
         long res = 1;
         for (Long i : map.keySet()) {
             if (map.get(i) % 2 == 0) {
