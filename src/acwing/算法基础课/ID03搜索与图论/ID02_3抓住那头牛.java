@@ -21,14 +21,14 @@ public class ID02_3抓住那头牛 {
             Integer v = queue.pollFirst();
             if (v == k) return cnt[v];
             int[] d = {1, v, -1};
-                for (int i = 0; i < 3; i++) {
-                    int next = v + d[i];
-                    if (next <= 100000&&!visit[next] ) {
-                        queue.add(next);
-                        visit[next] = true;
-                        cnt[next] = cnt[v] + 1;
-                    }
+            for (int i = 0; i < 3; i++) {
+                int next = v + d[i];
+                if (next >= 0 && next <= 100000 && !visit[next]) {
+                    queue.add(next);
+                    visit[next] = true;
+                    cnt[next] = cnt[v] + 1;
                 }
+            }
         }
         return 0;
     }
