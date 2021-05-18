@@ -1,4 +1,4 @@
-package acwing.算法提高课.ID03图论;
+package acwing.算法提高课.ID03图论.ID01单源最短路的建图方式;
 
 import java.util.Arrays;
 import java.util.Scanner;
