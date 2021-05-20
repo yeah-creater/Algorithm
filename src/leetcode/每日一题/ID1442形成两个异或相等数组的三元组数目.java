@@ -3,7 +3,7 @@ package leetcode.每日一题;
 /**
  * @author: yeah
  */
-class Solution {
+class Solution1{
     public int countTriplets(int[] arr) {
         int [][]sum=new int[305][305];
         for(int i=0;i<arr.length;i++){
