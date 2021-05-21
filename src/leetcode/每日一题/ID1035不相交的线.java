@@ -1,5 +1,8 @@
 package leetcode.每日一题;
 
+/**
+ * 最长公共子序列
+ */
 class Solution4 {
     public int maxUncrossedLines(int[] nums1, int[] nums2) {
         int n = nums1.length;
