@@ -1,6 +1,5 @@
 package acwing.算法提高课.ID04高级数据结构.ID02数状数组;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
