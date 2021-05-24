@@ -1,7 +1,6 @@
 package codeforces.EducationalCodeforcesRound109;
 
-import com.sun.org.apache.xpath.internal.SourceTree;
-import javafx.scene.transform.Scale;
+
 
 import java.util.Scanner;
 
