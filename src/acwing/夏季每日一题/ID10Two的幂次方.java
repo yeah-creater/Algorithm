@@ -6,7 +6,7 @@ import java.util.Scanner;
  * @author: yeah
  * 虽然 有点复杂，但是完全独立写的可还行
  */
-public class ID102的幂次方 {
+public class ID10Two的幂次方 {
     static int getExp(int x) {
         if (x == 1) return 0;
         int res = 2;
