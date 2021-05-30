@@ -1,51 +1,56 @@
 package acwing.周赛.第一场;
 
+import java.io.BufferedWriter;
+import java.io.OutputStreamWriter;
 import java.util.Arrays;
 import java.util.Scanner;
 
 /**
  * @author: yeah
+ * 就是个找环的过程  1 2 3 4 5 6
+ * 4 6 1 3 5 2
+ * 1会变成 4->3->1  经过3次变为自己
+ * 使用并查集 联通块
  */
 public class C {
-    static int t,n;
+    static int t, n;
+    static int[] p, res;
 
-
-    public static void main(String[] args) {
-        Scanner in=new Scanner(System.in);
-        t=in.nextInt();
-        while (t-->0){
-            n=in.nextInt();
-            int[]q=new int[n+10];
-            int[]tmp=new int[n+10];
-            int[]res=new int[n+10];
-            Arrays.fill(res,1);
-            int cnt=0;
-            for(int i=1;i<=n;i++){
-                q[i]=in.nextInt();
-                tmp[i]=q[i];
-                if(q[i]==i) {
-                    cnt++;
-                }
-            }
-
-            while (cnt<n){
-                for(int i=1;i<=n;i++){
-                    q[i]=tmp[i];
-                }
-                for(int i=1;i<=n;i++){
-                    if(q[i]!=i){
-                        tmp[q[q[i]]]=q[i];
-                        res[q[i]]++;
-                    }
-                    else{
-                        cnt++;
-                    }
-                }
-            }
-            for(int i=1;i<=n;i++){
-                System.out.print(res[i]+" ");
-            }
-            System.out.println();
+    static int find(int x) {
+        if (x != p[x]) {
+            p[x] = find(p[x]);
         }
+        return p[x];
+    }
+
+    public static void main(String[] args) throws Exception {
+        Scanner in = new Scanner(System.in);
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        t = in.nextInt();
+        while (t-- > 0) {
+            n = in.nextInt();
+            p = new int[n + 1];
+            res = new int[n + 1];
+            for (int i = 1; i <= n; i++) {
+                p[i] = i;
+                res[i] = 1;
+            }
+            for (int i = 1; i <= n; i++) {
+                int x = in.nextInt();
+
+                if (find(x) != find(i)) {
+                    res[find(i)] += res[find(x)];
+                    p[find(x)] = p[find(i)];
+                }
+            }
+
+            for (int i = 1; i <= n; i++) {
+                bw.write(res[find(i)] + " ");
+            }
+            bw.newLine();
+        }
+        bw.flush();
+
+
     }
 }
