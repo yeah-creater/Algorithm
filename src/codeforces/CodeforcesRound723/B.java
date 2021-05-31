@@ -11,9 +11,9 @@ import java.util.Scanner;
  * ...
  * 所以大于 111的数都可以用 a*111+b*11 表示
  * <p>
- * 所以 x= 11a+111b   a>=0&&b>=0
+ * 所以 x= 11a+111b   a>=0&&b>=0 b<11  if(b>=11 it can be replaced by 11*a)
  * x= 11(a+10b)+b
- * x%11 = b  b<11
+ * x%11 = b
  * <p>
  * x-111b=11a
  * (x-111b)/11 = a
@@ -30,7 +30,7 @@ public class B {
 
         while (n-- > 0) {
             int x = in.nextInt();
-            int a = 0, b = 0;
+            int a, b;
             b = x % 11;
             a = (x - 111 * b) / 11;
             if (a >= 0) {
@@ -38,8 +38,6 @@ public class B {
             } else {
                 System.out.println("NO");
             }
-
-
         }
     }
 }
