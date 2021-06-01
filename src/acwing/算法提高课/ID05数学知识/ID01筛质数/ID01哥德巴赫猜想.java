@@ -18,7 +18,7 @@ public class ID01哥德巴赫猜想 {
             if (!st[i]) {
                 prime[cnt++] = i;
             }
-            //筛质数的质数倍
+            //筛质数的倍shu
             for (int j = 0; prime[j] * i < N; j++) {
                 st[prime[j] * i] = true;
                 if (i % prime[j] == 0) break;
