@@ -2,6 +2,7 @@ package acwing.蓝桥杯._11届蓝桥杯国赛;
 
 /**
  * @author: yeah
+ * dfs
  */
 public class E玩具蛇 {
     static int[][] st = new int[4][4];

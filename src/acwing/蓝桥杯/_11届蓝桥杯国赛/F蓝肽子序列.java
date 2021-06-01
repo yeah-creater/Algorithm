@@ -9,7 +9,7 @@ import java.util.Scanner;
  * @author: yeah
  * 本质是最长公共子序列 只是每个字符要变成字符串
  */
-public class F {
+public class F蓝肽子序列 {
     static String s1, s2;
     static List<Integer> list1 = new ArrayList<>(), list2 = new ArrayList<>();
     static HashMap<Integer, String> map1 = new HashMap<>(), map2 = new HashMap<>();

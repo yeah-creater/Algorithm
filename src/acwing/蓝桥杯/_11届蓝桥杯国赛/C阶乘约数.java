@@ -5,6 +5,7 @@ import java.util.Set;
 
 /**
  * @author: yeah
+ * 数学
  * 约数的个数 是质因子 指数+1 。。。
  */
 public class C阶乘约数 {
