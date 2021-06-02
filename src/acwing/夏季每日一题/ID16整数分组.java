@@ -6,7 +6,7 @@ import java.util.Scanner;
 /**
  * @author: yeah
  */
-public class Day16整数分组 {
+public class ID16整数分组 {
     static int n, m;
     static int[] q = new int[5010];
     //q表示从前i个数中选j组
