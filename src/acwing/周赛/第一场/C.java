@@ -2,7 +2,6 @@ package acwing.周赛.第一场;
 
 import java.io.BufferedWriter;
 import java.io.OutputStreamWriter;
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
