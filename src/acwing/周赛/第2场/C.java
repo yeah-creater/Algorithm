@@ -1,4 +1,4 @@
-package acwing.周赛.第二场;
+package acwing.周赛.第2场;
 
 /**
  * @author: yeah

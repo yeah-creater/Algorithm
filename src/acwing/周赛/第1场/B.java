@@ -1,4 +1,4 @@
-package acwing.周赛.第一场;
+package acwing.周赛.第1场;
 
 import java.util.Arrays;
 import java.util.Scanner;
