@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Acer/Acer.iml" filepath="$PROJECT_DIR$/Acer/Acer.iml" />
       <module fileurl="file://$PROJECT_DIR$/algorithm/algorithm.iml" filepath="$PROJECT_DIR$/algorithm/algorithm.iml" />
       <module fileurl="file://$PROJECT_DIR$/code.iml" filepath="$PROJECT_DIR$/code.iml" />
-      <module fileurl="file://$PROJECT_DIR$/front_project/front_project.iml" filepath="$PROJECT_DIR$/front_project/front_project.iml" />
     </modules>
   </component>
 </project>
