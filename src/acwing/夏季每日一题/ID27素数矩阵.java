@@ -3,7 +3,6 @@ package acwing.夏季每日一题;
 import java.io.BufferedWriter;
 import java.io.OutputStreamWriter;
 import java.util.Scanner;
-
 /**
  * @author: yeah
  * 不在最底层和做左层的为1 其他枚举
@@ -56,7 +55,6 @@ public class ID27素数矩阵 {
                     break;
                 }
             }
-
         }
         bw.flush();
     }
