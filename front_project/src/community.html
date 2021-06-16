@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>吐槽 - Acer</title>
+    <link rel="stylesheet" type="text/css" href="css/community.css"/>
+    <link rel="icon" type="image/png" sizes="144x144" href="images/logo.jpg"/>
+</head>
+<body onload="init_animated()">
+<div class="navbar">
+    <div class="navbar_center">
+        <div class="navbar_center_left">
+            <li class="index"><a href="index.html" target="_top">首页</a></li>
+            <li class="problem"><a href="problem/page1.html" target="_top">题库</a></li>
+            <li class="solution"><a href="solution.html" target="_top">题解</a></li>
+            <li class="blog"><a href="blog.html" target="_top">分享</a></li>
+            <li id="navigation_activity_active_id" class=""><a href="activity.html" target="_top">活动</a></li>
+            <li id="navigation_competition_active_id" class=""><a href="competition.html" target="_top">竞赛</a></li>
+            <li class="community"><a href="community.html" target="_top">吐槽</a></li>
+        </div>
+        <div class="navbar_center_right">
+            <li>
+                <a href="login.html" target="_top">登录/注册</a>
+            </li>
+        </div>
+    </div>
+    <div class="barrage">
+
+        <div class="screen">
+
+            <!--            <a href="#" class="s_close">X</a>-->
+
+            <div class="mask">
+                <!--内容在这里显示-->
+            </div>
+
+        </div>
+        <!--Send Begin-->
+        <div class="send">
+
+            <input type="text" class="s_text" placeholder="尽情吐槽,释放压力"/>
+
+            <input type="button" class="s_btn" value="说两句"/>
+
+        </div>
+
+        <!--Send End-->
+        <!--        <span class="s_close">X</span>-->
+
+    </div>
+</div>
+<script src="jq/jquery-3.5.1.js"></script>
+
+<script>
+
+    //提交评论
+    $(".send .s_btn").click(function () {
+        var text = $(".s_text").val();
+        if (text === "") {
+            return;
+        }
+        var _lable = $("<div style='right:20px;top:0px;opacity:1;color:" + getRandomColor() + ";'>" + text + "</div>");
+        $(".mask").append(_lable.show());
+        init_barrage();
+    })
+
+    //初始化弹幕技术
+    function init_barrage() {
+            var _top = 0;
+            $(".mask div").show().each(function () {
+                    var _left = $(window).width() - $(this).width();//浏览器最大宽度，作为定位left的值
+                    var _height = $(window).height();//浏览器最大高度
+                    _top += 75;
+                    if (_top >= (_height - 130)) {
+                        _top = 0;
+                    }
+                    $(this).css({left: _left, top: _top, color: getRandomColor()});//定时弹出文字
+                    var time = 10000;
+                    if ($(this).index() % 2 == 0) {
+                        time = 15000;
+                    }
+                    $(this).animate({left: "-" + _left + "px"}, time, function () {
+
+                        $(this).remove();
+                    });
+
+                }
+            );
+
+
+
+    }
+
+    //获取随机颜色
+    function getRandomColor() {
+        return '#' + (function (h) {
+                return new Array(7 - h.length).join("0") + h
+            }
+        )((Math.random() * 0x1000000 << 0).toString(16))
+    }
+</script>
+</body>
+</html>

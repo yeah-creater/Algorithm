@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+
+}
+
+.footer{
+    width: 80%;
+    height:30px;
+    position:fixed;
+    bottom: 0;
+    text-align: center;
+}
+.footer p{
+    margin: auto;
+    font-size: 15px;
+    color: #cccccc;
+}

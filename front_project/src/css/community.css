@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+
+}
+
+body {
+    background-image: url(../images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+
+.navbar {
+    width: 100%;
+    height: 50px;
+    background: #232323;
+    text-align-all: center;
+}
+
+.navbar_center {
+    width: 60%;
+    margin: auto;
+}
+
+.navbar_center_left {
+    color: #cccccc;
+}
+
+.navbar_center_left li {
+    margin-right: 50px;
+    float: left;
+
+}
+
+.navbar_center_right li {
+    float: right;
+    margin-right: 100px;
+}
+
+li {
+    list-style: none;
+}
+
+li a {
+    color: #cccccc;
+    font-size: 15px;
+    /*text-align: center;*/
+    line-height: 50px;
+    /*color: gold;*/
+}
+
+.barrage .screen {
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    top: 50px;
+    right: 0;
+}
+
+/*.barrage .screen .s_close {*/
+/*    z-index: 2;*/
+/*    top: 20px;*/
+/*    right: 20px;*/
+/*    position: absolute;*/
+/*    text-decoration: none;*/
+/*    width: 40px;*/
+/*    height: 40px;*/
+/*    border-radius: 20px;*/
+/*    text-align: center;*/
+/*    color: #fff;*/
+/*    background: #000;*/
+/*    line-height: 40px;*/
+/*    !*display: none;*!*/
+/*}*/
+
+.barrage .screen .mask {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    filter: alpha(opacity:1);
+    z-index: 1;
+}
+
+.barrage {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.barrage .screen .mask div {
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    white-space: nowrap;
+    line-height: 40px;
+    z-index: 40;
+}
+
+.barrage .send {
+    z-index: 1;
+    width: 100%;
+    height: 55px;
+    background: #000;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
+
+.barrage .send .s_text {
+    width: 600px;
+    height: 40px;
+    line-height: 10px;
+    font-size: 20px;
+}
+
+.barrage .send .s_btn {
+    width: 105px;
+    height: 46px;
+    background: #22B14C;
+    color: #fff;
+}
+
+.community a {
+    color: gold;!important;
+}
