@@ -1,6 +1,8 @@
 # 内容
 
-<p>模仿Acwing的静态low网站</p>
+*模仿Acwing的静态low网站*
+
+
 
 ### 主页代码
 ```html
@@ -53,4 +55,4 @@
 
 </html>
 ```
-[效果图]("www.acwing.com")
+[效果图]("http://www.acwing.com")
