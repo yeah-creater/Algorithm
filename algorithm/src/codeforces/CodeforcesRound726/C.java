@@ -1,6 +1,5 @@
 package codeforces.CodeforcesRound726;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -35,7 +34,7 @@ public class C {
                 System.out.print(q[i] + " ");
             }
             for (int i = 0; i < l; i++) {
-                System.out.print(q[i]+" ");
+                System.out.print(q[i] + " ");
             }
             System.out.println(q[r]);
         }
