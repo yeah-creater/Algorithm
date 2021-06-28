@@ -7,65 +7,66 @@
     <link rel="icon" type="image/png" sizes="144x144" href="images/logo.jpg"/>
 </head>
 <body>
-<div class="content">
-    <div class="content-head">
-        <div class="content-head-left">我要登录</div>
-        <div class="content-head-right">我要注册</div>
-    </div>
-    <form class="login" method="post" action="index.html">
-        <div>
-            <h4>账号</h4>
-            <input class="login_username" type="text" placeholder="用户名/手机/邮箱" required="required">
+    <div class="content">
+        <div class="content-head">
+            <div class="content-head-left">我要登录</div>
+            <div class="content-head-right">我要注册</div>
         </div>
-        <div>
-            <h4>密码</h4>
-            <input type="password" class="login_pwd" placeholder="请输入密码" required="required">
-        </div>
-        <br>
-        <input type="checkbox">
-        <span>记住密码</span>
-        <br>
-        <br>
-        <input type="submit" class="submit" value="登录"/>
-        <p>
-            <a href="">找回密码</a>
-            <span>|</span>
-            <span>还没有注册?</span>
-            <a href="">立即注册</a>
-        </p>
-
-    </form>
-    <form class="register" method="post" action="login.html">
-        <div>
-            <input type="text" placeholder="用户名/邮箱" required="required">
-        </div>
-        <div>
-            <input type="password" placeholder="密码" required="required">
-        </div>
-        <div>
-            <input type="password" placeholder="确认密码" required="required">
-        </div>
-        <div>
-            <input type="text" placeholder="手机" pattern="^1([358][0-9]|4[579]|66|7[0135678]|9[89])[0-9]{8}$" required="required">
-        </div>
-        <br>
-        <p>
+        <form class="login" method="post" action="index.html">
+            <div>
+                <h4>账号</h4>
+                <input class="login_username" type="text" placeholder="用户名/手机/邮箱" required="required">
+            </div>
+            <div>
+                <h4>密码</h4>
+                <input type="password" class="login_pwd" placeholder="请输入密码" required="required">
+            </div>
+            <br>
             <input type="checkbox">
-            <span>我已阅读并同意</span>
-            <a href="">隐私政策,服务条款</a>
-        </p>
-        <br>
-        <input type="submit" class="submit" value="注册"/>
-    </form>
-    <div class="footer">
-        <p>—使用第三方账号直接登录—</p>
-        <div>
-            <a href="qqQRcode.html"> <img src="images/qq.png" alt=""></a>
-            <a href="wechatQRcde.html"><img src="images/wechat.png" alt=""></a>
+            <span>记住密码</span>
+            <br>
+            <br>
+            <input type="submit" class="submit" value="登录"/>
+            <p>
+                <a href="">找回密码</a>
+                <span>|</span>
+                <span>还没有注册?</span>
+                <a href="">立即注册</a>
+            </p>
 
+        </form>
+        <form class="register" method="post" action="login.html">
+            <div>
+                <input type="text" placeholder="用户名/邮箱" required="required">
+            </div>
+            <div>
+                <input type="password" placeholder="密码" required="required">
+            </div>
+            <div>
+                <input type="password" placeholder="确认密码" required="required">
+            </div>
+            <div>
+                <input type="text" placeholder="手机" pattern="^1([358][0-9]|4[579]|66|7[0135678]|9[89])[0-9]{8}$" required="required">
+            </div>
+            <br>
+            <p>
+                <input type="checkbox">
+                <span>我已阅读并同意</span>
+                <a href="">隐私政策,服务条款</a>
+            </p>
+            <br>
+            <input type="submit" class="submit" value="注册"/>
+        </form>
+        <div class="footer">
+            <p>—使用第三方账号直接登录—</p>
+            <div>
+                <a href="qqQRcode.html"> <img src="images/qq.png" alt=""></a>
+                <a href="wechatQRcde.html"><img src="images/wechat.png" alt=""></a>
+
+            </div>
         </div>
     </div>
-</div>
+
 <script src="jq/jquery-3.5.1.js"></script>
 <script>
     $(".content-head-left").click(function () {

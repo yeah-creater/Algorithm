@@ -11,6 +11,7 @@ body {
     background-size: 100%;
 }
 
+
 .content {
     width: 500px;
     height: 560px;
@@ -110,7 +111,6 @@ body {
     width: 400px;
     height: 330px;
     margin: 30px auto;
-
     text-align: center;
     font-size: 20px;
 }

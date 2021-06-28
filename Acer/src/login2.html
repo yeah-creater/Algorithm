@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<title>video全屏背景视频播放特效 - 站长素材</title>
+
+<link rel="stylesheet" href="css/login2.css">
+
+</head>
+<body>
+
+<section class="showcase">
+	<div class="video-container">
+		<video src="images/video.mp4" autoplay muted loop></video>
+	</div>
+	<div class="content">
+		<div class="content-head">
+			<div class="content-head-left">我要登录</div>
+			<div class="content-head-right">我要注册</div>
+		</div>
+		<form class="login" method="post" action="index.html">
+			<div>
+				<h4>账号</h4>
+				<input class="login_username" type="text" placeholder="用户名/手机/邮箱" required="required">
+			</div>
+			<div>
+				<h4>密码</h4>
+				<input type="password" class="login_pwd" placeholder="请输入密码" required="required">
+			</div>
+			<br>
+			<input type="checkbox">
+			<span>记住密码</span>
+			<br>
+			<br>
+			<input type="submit" class="submit" value="登录"/>
+			<p>
+				<a href="">找回密码</a>
+				<span>|</span>
+				<span>还没有注册?</span>
+				<a href="">立即注册</a>
+			</p>
+
+		</form>
+		<form class="register" method="post" action="login.html">
+			<div>
+				<input type="text" placeholder="用户名/邮箱" required="required">
+			</div>
+			<div>
+				<input type="password" placeholder="密码" required="required">
+			</div>
+			<div>
+				<input type="password" placeholder="确认密码" required="required">
+			</div>
+			<div>
+				<input type="text" placeholder="手机" pattern="^1([358][0-9]|4[579]|66|7[0135678]|9[89])[0-9]{8}$" required="required">
+			</div>
+			<br>
+			<p>
+				<input type="checkbox">
+				<span>我已阅读并同意</span>
+				<a href="">隐私政策,服务条款</a>
+			</p>
+			<br>
+			<input type="submit" class="submit" value="注册"/>
+		</form>
+		<div class="footer">
+			<p>—使用第三方账号直接登录—</p>
+			<div>
+				<a href="qqQRcode.html"> <img src="images/qq.png" alt=""></a>
+				<a href="wechatQRcde.html"><img src="images/wechat.png" alt=""></a>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+
+</body>
+<script src="jq/jquery-3.5.1.js"></script>
+<script>
+	$(".content-head-left").click(function () {
+		$(".content-head-left").css('background-color', 'white')
+		$(".content-head-right").css('background-color', '#cccccc')
+		$(".login").css('display', 'block');
+		$(".register").css('display', 'none');
+		$(".footer").css('display', 'block');
+	})
+	$(".content-head-right").click(function () {
+		$(".content-head-left").css('background-color', '#cccccc')
+		$(".content-head-right").css('background-color', 'white')
+		$(".login").css('display', 'none');
+		$(".register").css('display', 'block');
+		$(".footer").css('display', 'none');
+	})
+
+</script>
+</html>
