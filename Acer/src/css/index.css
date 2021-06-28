@@ -9,7 +9,6 @@ body {
     background-image: url(../images/bg.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
-    position: static;
 }
 
 
@@ -82,5 +81,5 @@ li a {
     margin: auto;
     width: 100%;
     position: fixed;
-    bottom: 0;
+    bottom: 2px;
 }

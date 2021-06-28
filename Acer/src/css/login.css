@@ -82,12 +82,15 @@ body {
     background-color: purple;
     text-align: center;
     line-height: 40px;
-}
-
-.login .submit a {
     font-size: 18px;
     color: white;
+    border: none;
 }
+
+/*.login .submit a {*/
+/*    font-size: 18px;*/
+/*    color: white;*/
+/*}*/
 
 .login p {
     margin-top: 20px;
@@ -134,16 +137,24 @@ body {
 }
 
 .register .submit {
+    border: none;
     height: 40px;
     width: 100%;
     background-color: purple;
     text-align: center;
     line-height: 40px;
-}
-
-.register .submit a {
     font-size: 18px;
     color: white;
+}
+
+
+/*.register .submit a {*/
+/*    font-size: 18px;*/
+/*    color: white;*/
+/*}*/
+.submit:hover{
+    cursor: pointer;
+    font-size: 20px;
 }
 
 .register p {
