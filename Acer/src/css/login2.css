@@ -96,7 +96,9 @@ a {
 	/*color: #666666;*/
 	background-color: #cccccc;
 }
-
+a{
+	color: darkgrey;
+}
 .login {
 	width: 400px;
 	height: 330px;
